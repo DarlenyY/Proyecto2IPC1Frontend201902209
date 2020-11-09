@@ -123,7 +123,7 @@
 
      function CargarUs()
      {
-        fetch('https://musicstation201902209.herokuapp.com/Personas').then(res => res.json())
+        fetch('https://musicstation201902209.herokuapp.com//Personas').then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")
@@ -155,7 +155,7 @@
       }
       function Eliminar(boton){     
         var usuario = boton.value  
-        fetch(`http://localhost:3000/Personas/${usuario}`, {
+        fetch(`https://musicstation201902209.herokuapp.com//Personas/${usuario}`, {
         method: 'DELETE',
         }).then(res => res.json())
         .catch(error => {

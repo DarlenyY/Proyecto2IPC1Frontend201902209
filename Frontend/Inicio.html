@@ -92,7 +92,7 @@
     <script>
          function MostrarCanciones()
        {
-        fetch('https://musicstation201902209.herokuapp.com/Canciones').then(res => res.json())
+        fetch('https://musicstation201902209.herokuapp.com//Canciones').then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")
@@ -122,7 +122,7 @@
        function Bus()
        {
         var palabra = document.querySelector('#Buscar').value 
-        fetch(`https://musicstation201902209.herokuapp.com/Buscar/${palabra}`).then(res => res.json())
+        fetch(`https://musicstation201902209.herokuapp.com//Buscar/${palabra}`).then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")
@@ -168,7 +168,7 @@
                'user': usuario
            }
            console.log(objeto)
-           fetch('https://musicstation201902209.herokuapp.com/AgPlay', {
+           fetch('https://musicstation201902209.herokuapp.com//AgPlay', {
            method: 'POST', 
            body: JSON.stringify(objeto), 
            headers:{

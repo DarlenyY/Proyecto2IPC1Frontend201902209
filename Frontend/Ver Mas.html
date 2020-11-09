@@ -84,7 +84,7 @@
           {
             var Id = sessionStorage.Id
             console.log(Id)
-           fetch(`https://musicstation201902209.herokuapp.com/PlayVer/${Id}`).then(res => res.json())
+           fetch(`https://musicstation201902209.herokuapp.com//PlayVer/${Id}`).then(res => res.json())
            .catch(err => {
            console.error('Error:', err)
            alert("Ocurrio un error, ver la consola")
@@ -138,7 +138,7 @@
                'texto': texto
            }
            console.log(objeto)
-           fetch('https://musicstation201902209.herokuapp.com/Com', {
+           fetch('https://musicstation201902209.herokuapp.com//Com', {
            method: 'POST', 
            body: JSON.stringify(objeto), 
            headers:{
@@ -168,7 +168,7 @@
        {
         var id = sessionStorage.Id 
         console.log(id)
-        fetch("https://musicstation201902209.herokuapp.com/Com").then(res => res.json())
+        fetch("https://musicstation201902209.herokuapp.com//Com").then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")
