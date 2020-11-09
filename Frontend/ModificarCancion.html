@@ -116,7 +116,7 @@
               'id': id
           }
            console.log(objeto)
-           fetch('http://127.0.0.1:3000/VerCancion', {
+           fetch('https://musicstation201902209.herokuapp.com/VerCancion', {
            method: 'POST', 
            body: JSON.stringify(objeto), 
            headers:{
@@ -173,7 +173,7 @@
         'youtube': youtube
         }
         console.log(objeto)
-        fetch('http://127.0.0.1:3000/ActualizarCan', 
+        fetch('https://musicstation201902209.herokuapp.com/ActualizarCan', 
         { method: 'PUT',  
          body: JSON.stringify(objeto), 
            headers:{

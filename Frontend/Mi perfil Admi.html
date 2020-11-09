@@ -109,7 +109,7 @@
           }
           
            console.log(objeto)
-           fetch('http://127.0.0.1:3000/Info', {
+           fetch('https://musicstation201902209.herokuapp.com/Info', {
            method: 'POST', 
            body: JSON.stringify(objeto), 
            headers:{
@@ -161,7 +161,7 @@
         'contrasena': contrasena1
         }
         console.log(objeto)
-        fetch('http://127.0.0.1:3000/Actualizar', 
+        fetch('https://musicstation201902209.herokuapp.com/Actualizar', 
         { method: 'PUT',  
          body: JSON.stringify(objeto), 
            headers:{

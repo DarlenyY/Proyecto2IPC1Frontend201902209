@@ -81,7 +81,7 @@
     <script>
      function CargarSol()
      {
-        fetch('http://127.0.0.1:3000/Solicitudes').then(res => res.json())
+        fetch('https://musicstation201902209.herokuapp.com/Solicitudes').then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")
@@ -111,7 +111,7 @@
                'pos': pos
            }
            console.log(objeto)
-           fetch('http://127.0.0.1:3000/AceptarSol', {
+           fetch('https://musicstation201902209.herokuapp.com/AceptarSol', {
            method: 'POST', 
            body: JSON.stringify(objeto), 
            headers:{

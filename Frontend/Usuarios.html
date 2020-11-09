@@ -123,7 +123,7 @@
 
      function CargarUs()
      {
-        fetch('http://127.0.0.1:3000/Personas').then(res => res.json())
+        fetch('https://musicstation201902209.herokuapp.com/Personas').then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")

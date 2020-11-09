@@ -177,7 +177,7 @@
       function Bus()
        {
         var palabra = document.querySelector('#Buscar').value 
-        fetch(`http://127.0.0.1:3000/Buscar/${palabra}`).then(res => res.json())
+        fetch(`https://musicstation201902209.herokuapp.com/Buscar/${palabra}`).then(res => res.json())
         .catch(err => {
         console.error('Error:', err)
         alert("Ocurrio un error, ver la consola")
@@ -245,7 +245,7 @@
   
       function MostrarCanciones()
          {
-          fetch('http://127.0.0.1:3000/Canciones').then(res => res.json())
+          fetch('https://musicstation201902209.herokuapp.com/Canciones').then(res => res.json())
           .catch(err => {
           console.error('Error:', err)
           alert("Ocurrio un error, ver la consola")
