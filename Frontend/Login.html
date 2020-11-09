@@ -1,0 +1,341 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/dpinnick/pen/LjdLmo?limit=all&page=21&q=service" />
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<!-- Styles -->
+<link rel="stylesheet" href="assets/css/login.css">
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
+
+<!-- Ionic icons -->
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+</head><body>
+        <!-- LOGIN MODULE -->
+        <div class="login">
+            <div class="wrap">
+                <!-- TOGGLE -->
+                <div id="toggle-wrap">
+                    <div id="toggle-terms">
+                        <div id="cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RECOVERY -->
+                <div class="recovery">
+                    <h2>Recuperar Contraseña</h2>
+                    <p>Ingrese su <strong>username</strong> y haga click en el boton <strong>"recuperar"</strong></p>
+                    <p>se desplegara una ventana con contraseña</p>
+                    <form class="recovery-form" action="" method="post">
+                        <input id="Recuperar" type="text" class="input" placeholder="Username">
+                        <button onclick = "RecuperarC()" type="button" class="button">Recuperar</button>
+                    </form>
+                </div>
+
+                <!-- SLIDER -->
+                <div class="content">
+                    <!-- LOGO -->
+                    <div class="logo">
+                        <a href="#"><img src="https://res.cloudinary.com/dpcloudinary/image/upload/v1506186248/logo.png" alt=""></a>
+                    </div>
+                    <!-- SLIDESHOW -->
+                    <div id="slideshow">
+                        <div class="one">
+                            <h2><span>Music Stacion </span></h2>
+                            <p> <img src="assets/img/logo.jpg"  height="50"></p>
+                        </div>
+                        <div class="two">
+                            <h2><span>Acerca de:</span></h2>
+                            <p>La Mejor pagina que te permite escuchar tu musica favorita en donde quieras, con quien quieras y cuando quieras</p>
+                        </div>
+                        <div class="three">
+                            <h2><span>Contactanos:</span></h2>
+                            <p><i class="icon ion-logo-facebook lead mr-2"></i> Darleny Yuman</p>
+                            <p><i class="icon ion-logo-instagram lead mr-2"></i> _Kath28</p>
+                            <p><i class="icon ion-logo-whatsapp lead mr-2"></i> 4175 - 4024</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOGIN FORM -->
+                <div class="user">
+                    <!-- ACTIONS
+                    <div class="actions">
+                        <a class="help" href="#signup-tab-content">Sign Up</a><a class="faq" href="#login-tab-content">Login</a>
+                    </div>
+                    -->
+                    <div class="form-wrap">
+                        <!-- TABS -->
+                    	<div class="tabs">
+                            <h3 class="login-tab"><a class="log-in active" href="#login-tab-content"><span>Login<span></a></h3>
+                    		<h3 class="signup-tab"><a class="sign-up" href="#signup-tab-content"><span>Sign Up</span></a></h3>
+                    	</div>
+                        <!-- TABS CONTENT -->
+                    	<div class="tabs-content">
+                            <!-- TABS CONTENT LOGIN -->
+                    		<div id="login-tab-content" class="active">
+                    			<form class="login-form" action="" method="post">
+                    				<input id="usuario" type="text" class="input"  autocomplete="off" placeholder="Username">
+                    				<input id="password" type="password" class="input" autocomplete="off" placeholder="Password">
+                                    <button onclick = "IniciarSesion()" type="button" class="button" >Login</button>
+                
+                    			</form>
+                    			<div class="help-action">
+                    				<p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="forgot" href="#">Forgot your password?</a></p>
+                                    <audio src = "assets/music/CancionLogin.mp3" autoplay= "true" loop>
+                                    </audio>
+                            </div>
+                            </div>
+                            <!-- TABS CONTENT SIGNUP -->
+                    		<div id="signup-tab-content">
+                    			<form class="signup-form" action="" method="post">
+                                    <input id="nombre" type="text" class="input" autocomplete="off" placeholder="Name">
+                                    <input id="apellido" type="text" class="input" autocomplete="off" placeholder="Last name">
+                    				<input id="user"  type="text" class="input"autocomplete="off" placeholder="Username">
+                                    <input id="contrasena1" type="password" class="input" autocomplete="off" placeholder="Password">
+                                    <input id="confirmar" type="password" class="input" autocomplete="off" placeholder="Password">
+                    				<button onclick="Registrar()" type="button" class="button" >Sign Up</button>
+                    			</form>
+                    		</div>
+                    	</div>
+                	</div>
+                </div>
+            </div>
+        </div>
+
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+ // Metodo para iniciar sesion
+ function IniciarSesion(){
+        var username = document.querySelector('#usuario').value
+        var password = document.querySelector('#password').value
+        var objeto = {
+            'user': username,
+            'contrasena': password
+        }
+        console.log(objeto)
+        fetch('http://127.0.0.1:3000/Login', {
+        method: 'POST', 
+        body: JSON.stringify(objeto), 
+        headers:{
+            'Content-Type': 'application/json'
+        }
+        }).then(res => res.json())
+        .catch(err => {
+        console.error('Error:', err)
+        alert("Ocurrio un error, ver la consola")
+        })
+        .then(response =>{
+        console.log(response);
+        console.log(response.message)
+        if(response.message == "Failed"){
+            alert("No has ingresado las credencilaes correctas")
+        }else{
+            alert(`Credenciales correctas, bienvenido ${username}`)
+            sessionStorage.setItem("usuario",username)
+           if(response.tipo == 1)
+           {
+            //alert("Cliente")
+             location.href="Inicio.html"
+           }
+           else if(response.tipo == 2)
+           {
+            //alert("Admi")
+             location.href="Index.html"
+           }
+           
+        }
+        }) 
+        }
+    // Metodo para registrarse
+    function Registrar(){
+           var nombre =  document.querySelector('#nombre').value
+           var apellido =  document.querySelector('#apellido').value
+           var username = document.querySelector('#user').value
+           var contrasena = document.querySelector('#contrasena1').value
+           var confirmar = document.querySelector('#confirmar').value
+           if(nombre == "" ||  apellido =="" || username == "" || contrasena == "" || confirmar =="" )
+           {
+            alert("Debe llenar todos los espacios")
+           }
+           else{
+           
+           if (contrasena == confirmar)
+           {
+            var objeto = {
+               'nombre': nombre,
+               'apellido': apellido,
+               'user': username,
+               'contrasena': contrasena,
+               'tipo':1 
+           }
+           console.log(objeto)
+           fetch('http://127.0.0.1:3000/Personas', {
+           method: 'POST', 
+           body: JSON.stringify(objeto), 
+           headers:{
+               'Content-Type': 'application/json'
+           }
+           }).then(res => res.json())
+           .catch(err => {
+           console.error('Error:', err)
+           alert("Ocurrio un error, ver la consola")
+           })
+           .then(response =>{
+           console.log(response);
+           console.log(response.message)
+           if(response.message == "Failed"){
+               alert(response.reason)
+           }else{
+               alert(response.reason)
+           }
+           }) 
+           }
+           else{
+               alert("Las contraceñas no coinciden")
+           }
+               
+        }
+           }
+
+  // Rcuperar Contraseña
+    function RecuperarC(){
+    var nom =  document.querySelector('#Recuperar').value
+    var objeto = {
+              'user1': nom
+          }
+           console.log(objeto)
+           fetch('http://127.0.0.1:3000/RecuperarContra', {
+           method: 'POST', 
+           body: JSON.stringify(objeto), 
+           headers:{
+               'Content-Type': 'application/json'
+           }
+           }).then(res => res.json())
+           .catch(err => {
+           console.error('Error:', err)
+           alert("Ocurrio un error, ver la consola")
+           })
+           .then(response =>{
+           console.log(response);
+           console.log(response.message)
+           if(response.message == "Failed"){
+               alert(response.reason)
+           }else{
+               alert(response.contraseña)
+           }
+           })  
+    }
+   </script>
+   
+<script >/* LOGIN - MAIN.JS - dp 2017 */
+
+// LOGIN TABS
+$(function() {
+	var tab = $('.tabs h3 a');
+	tab.on('click', function(event) {
+		event.preventDefault();
+		tab.removeClass('active');
+		$(this).addClass('active');
+		tab_content = $(this).attr('href');
+		$('div[id$="tab-content"]').removeClass('active');
+		$(tab_content).addClass('active');
+	});
+});
+
+// SLIDESHOW
+$(function() {
+	$('#slideshow > div:gt(0)').hide();
+	setInterval(function() {
+		$('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	}, 3850);
+});
+
+// CUSTOM JQUERY FUNCTION FOR SWAPPING CLASSES
+(function($) {
+	'use strict';
+	$.fn.swapClass = function(remove, add) {
+		this.removeClass(remove).addClass(add);
+		return this;
+	};
+}(jQuery));
+
+// SHOW/HIDE PANEL ROUTINE (needs better methods)
+// I'll optimize when time permits.
+$(function() {
+	$('.agree,.forgot, #toggle-terms, .log-in, .sign-up').on('click', function(event) {
+		event.preventDefault();
+		var terms = $('.terms'),
+        recovery = $('.recovery'),
+        close = $('#toggle-terms'),
+        arrow = $('.tabs-content .fa');
+		if ($(this).hasClass('agree') || $(this).hasClass('log-in') || ($(this).is('#toggle-terms')) && terms.hasClass('open')) {
+			if (terms.hasClass('open')) {
+				terms.swapClass('open', 'closed');
+				close.swapClass('open', 'closed');
+				arrow.swapClass('active', 'inactive');
+			} else {
+				if ($(this).hasClass('log-in')) {
+					return;
+				}
+				terms.swapClass('closed', 'open').scrollTop(0);
+				close.swapClass('closed', 'open');
+				arrow.swapClass('inactive', 'active');
+			}
+		}
+		else if ($(this).hasClass('forgot') || $(this).hasClass('sign-up') || $(this).is('#toggle-terms')) {
+			if (recovery.hasClass('open')) {
+				recovery.swapClass('open', 'closed');
+				close.swapClass('open', 'closed');
+				arrow.swapClass('active', 'inactive');
+			} else {
+				if ($(this).hasClass('sign-up')) {
+					return;
+				}
+				recovery.swapClass('closed', 'open');
+				close.swapClass('closed', 'open');
+				arrow.swapClass('inactive', 'active');
+			}
+		}
+	});
+});
+
+// DISPLAY MSSG
+$(function() {
+	$('.recovery .button').on('click', function(event) {
+		event.preventDefault();
+		$('.recovery .mssg').addClass('animate');
+		setTimeout(function() {
+			$('.recovery').swapClass('open', 'closed');
+			$('#toggle-terms').swapClass('open', 'closed');
+			$('.tabs-content .fa').swapClass('active', 'inactive');
+			$('.recovery .mssg').removeClass('animate');
+		}, 2500);
+	});
+});
+
+// DISABLE SUBMIT FOR DEMO
+$(function() {
+	$('.button').on('click', function(event) {
+		$(this).stop();
+		event.preventDefault();
+		return false;
+	});
+});
+//# sourceURL=pen.js
+</script>
+</body></html>

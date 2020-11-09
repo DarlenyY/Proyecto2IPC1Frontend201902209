@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <title>Solicitar Cancion</title>
+</head>
+
+<body>
+    <div class="d-flex" id="content-wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <h2 class="text-light font-weight-bold mb-0">Music Station</h2>
+            </div>
+            <div class="menu">
+              <a href="Inicio.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-home lead mr-2"></i>
+                Pagina Principal</a>
+          <a href="Mi Perfil Cliente.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-contact lead mr-2"></i>
+            Mi Perfil</a>
+        <a href="My playlist.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-headset lead mr-2"></i>
+            Mi Playlist</a>
+        <a href="Solicitar Cancion.html" class="d-block text-light p-3 border-0"><i class="icon ion-md-add lead mr-2"></i>
+            Solicitar Canción</a>
+            <a href="Login.html" class="d-block text-light mb-0 p-3 border-0"> <i class="icon ion-md-exit lead mr-2"></i>
+              Cerrar Sesión</a>
+            </div>
+        </div>
+        <!-- Fin sidebar -->
+
+        <div class="w-100">
+
+         <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container">
+    
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+          <!-- Fin Navbar -->
+
+        <!-- Page Content -->
+        <div id="content" class="bg-grey w-100">
+            <div class="container">
+                <center>
+              <section class="bg-light py-3">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-12 col-md-8">
+                            <h1 class="text-light font-weight-bold mb-0"><i class="icon ion-md-add font-weight-bold mb-0"></i>
+                                Solicitar Canción</h1>
+                          </div>
+                      </div>
+             
+                  </div>
+              </section>
+              <section class="bg-mix py-3">
+               <div class="col-lg-6 col-md-8">
+                <form>
+                    <div class="mx-auto">
+                      <input type="text" class="form-control" id="nom" aria-describedby="emailHelp" placeholder="Nombre Canción">
+                    </div>
+                      <div class="mx-auto">  
+                        <label for="exampleInputEmail1"></label></label>
+                      <input type="text" class="form-control" id="art" aria-describedby="emailHelp" placeholder="Artista/Banda">
+                    </div>
+                    <div class="mx-auto">
+                      <label for="exampleInputEmail1"></label></label>
+                      <input type="text" class="form-control" id="alb" aria-describedby="emailHelp" placeholder="Album">
+                    </div>
+                    <div class="mx-auto">
+                        <label for="exampleInputEmail1"></label></label>
+                        <input type="text" class="form-control" id="fec" aria-describedby="emailHelp" placeholder="Fecha de Lanzamiento">
+                      </div>
+                      <div class="mx-auto">
+                        <label for="exampleInputEmail1"></label></label>
+                        <input type="text" class="form-control" id="img" aria-describedby="emailHelp" placeholder="Link de Portada">
+                      </div>
+                      <div class="mx-auto">
+                        <label for="exampleInputEmail1"></label></label>
+                        <input type="text" class="form-control" id="spo" aria-describedby="emailHelp" placeholder="Link de Spotify">
+                      </div>
+                      <div class="mx-auto">
+                        <label for="exampleInputEmail1"></label></label>
+                        <input type="text" class="form-control" id="you" aria-describedby="emailHelp" placeholder="Link de YouTube">
+                      </div>
+                      <div class="mx-auto">
+                        <label for="exampleInputPassword1"></label>
+                    </div>
+                    <div class="mx-auto">
+                    <button onclick="Enviar()" type="button" class="btn btn-primary align-self-center">Enviar Solicitud</button>
+                </div>
+                  </form>         
+              </section>
+            </center>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>
+<script>
+    function Enviar(){
+           var nombre =  document.querySelector('#nom').value
+           var artista =  document.querySelector('#art').value
+           var album = document.querySelector('#alb').value
+           var fecha = document.querySelector('#fec').value
+           var imagen = document.querySelector('#img').value
+           var spotify = document.querySelector('#spo').value
+           var youtube = document.querySelector('#you').value
+           if(nombre == "" ||  artista =="" || album == "" || fecha == "" || imagen =="" || spotify =="" || youtube =="")
+           {
+            alert("Debe llenar todos los espacios")
+           }
+           else{
+            var objeto = {
+               'nombre': nombre,
+               'artista': artista,
+               'album': album,
+               'fecha': fecha,
+               'imagen': imagen,
+               'spotify': spotify,
+               'youtube': youtube
+           }
+           console.log(objeto)
+           fetch('http://127.0.0.1:3000/Solicitud', {
+           method: 'POST', 
+           body: JSON.stringify(objeto), 
+           headers:{
+               'Content-Type': 'application/json'
+           }
+           }).then(res => res.json())
+           .catch(err => {
+           console.error('Error:', err)
+           alert("Ocurrio un error, ver la consola")
+           })
+           .then(response =>{
+           console.log(response);
+           console.log(response.message)
+           alert(response.reason)
+           }) 
+          
+               
+        }
+           }
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, { 
+                type: 'bar',
+                data: {
+                    labels: ['Feb 2020', 'Mar 2020', 'Abr 2020', 'May 2020'],
+                    datasets: [{
+                        label: 'Nuevos usuarios',
+                        data: [50, 100, 150, 200],
+                        backgroundColor: [
+                            '#12C9E5',  
+                            '#12C9E5',
+                            '#12C9E5',
+                            '#111B54'
+                        ],
+                        maxBarThickness: 30,
+                        maxBarLength: 2
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+</body>
+
+</html>
