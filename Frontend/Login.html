@@ -84,7 +84,7 @@
                     			<form class="login-form" action="" method="post">
                     				<input id="usuario" type="text" class="input"  autocomplete="off" placeholder="Username">
                     				<input id="password" type="password" class="input" autocomplete="off" placeholder="Password">
-                                    <button onclick = "IniciarSesion()" type="button" class="button" >Login</button>
+                                    <button onclick = "IniciarSesion()" type="button" class="btn btn-primary" >Login</button>
                 
                     			</form>
                     			<div class="help-action">
@@ -273,6 +273,14 @@ $(function() {
 	}, 3850);
 });
 
+// CUSTOM JQUERY FUNCTION FOR SWAPPING CLASSES
+(function($) {
+	'use strict';
+	$.fn.swapClass = function(remove, add) {
+		this.removeClass(remove).addClass(add);
+		return this;
+	};
+}(jQuery));
 
 // SHOW/HIDE PANEL ROUTINE (needs better methods)
 // I'll optimize when time permits.
